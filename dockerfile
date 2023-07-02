@@ -5,7 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the poetry.lock and pyproject.toml files
-COPY poetry.lock pyproject.toml /app/
+COPY /src/poetry.lock /src/pyproject.toml /app/
 
 # Install Poetry
 RUN pip install poetry

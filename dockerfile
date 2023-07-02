@@ -5,13 +5,13 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Copy the poetry.lock and pyproject.toml files
-COPY /src/poetry.lock /src/pyproject.toml /app/
+COPY /src/* /app/
 
 # Install Poetry
 RUN pip install poetry
 
 # Install project dependencies
-RUN poetry config virtualenvs.create false \
+RUN poetry config virtualenvs.create true \
     && poetry install --no-interaction --no-ansi
 
 # Copy the application code

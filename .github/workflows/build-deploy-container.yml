@@ -5,7 +5,7 @@ on:
     branches: [main]
 
 env:
-  IMAGE_NAME: Tessian-Task
+  IMAGE_NAME: tessian-tasks
 
 jobs:
   build-and-push:

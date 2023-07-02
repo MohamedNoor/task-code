@@ -15,9 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    name: Copy Dockerfile
-      run: cp /src/dockerfile .
-
     - name: Login to Amazon ECR
       uses: aws-actions/configure-aws-credentials@v1
       with:

@@ -1,4 +1,9 @@
 # Github work flow to build and deploy docker image to ECR
+name: Build and Push Docker Image
+
+on:
+  push:
+    branches: [main]
 
 env:
   IMAGE_NAME: tessian-task-image
